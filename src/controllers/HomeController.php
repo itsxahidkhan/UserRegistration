@@ -17,8 +17,12 @@ class HomeController {
     }
 
     public function dashboard(){
+
         try {
-            require_once 'views/home/dashboard.php';
+            if (!isset($_SESSION['user_id'])) {
+                require_once 'views/home/dashboard.php';
+            }
+            redirectTo('/');
         } catch (Exception $e) {
             logError($e->getMessage());
         }
