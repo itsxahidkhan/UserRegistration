@@ -31,6 +31,9 @@ if ($_SERVER['REQUEST_URI'] == '/register') {
 } elseif ($_SERVER['REQUEST_URI'] == '/dashboard') {
     $controller = new HomeController($pdo);
     $controller->dashboard();
+} elseif ($_SERVER['REQUEST_URI'] == '/uploadProfileImage') {
+    $controller = new HomeController($pdo);
+    $controller->uploadProfileImage();
 } else {
     header("HTTP/1.0 404 Not Found");
     echo 'Page not found!';
