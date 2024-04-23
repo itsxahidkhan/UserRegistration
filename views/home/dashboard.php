@@ -9,8 +9,13 @@
 <body>
 <div class="register">
     <h1>Welcome <?=$_SESSION['user_name']?></h1>
-    <form id="login_form" action="/" method="POST" autocomplete="off">
-        <input type="submit" value="Logout">
+
+    <?php if ($_SESSION['profile_image']){ ?>
+        <img src="<?=$_SESSION['profile_image']?>" id="profile_image">
+    <?php } ?>
+    <form id="profile_form" action="/uploadProfileImage" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profile_image" id="profile_image_input">
+        <input type="submit" value="Upload">
     </form>
 </div>
 </body>
