@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="register">
+    <a href="/logout">Logout</a>
     <h1>Welcome <?=$_SESSION['user_name']?></h1>
 
     <?php if ($_SESSION['profile_image']){ ?>

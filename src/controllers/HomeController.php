@@ -10,10 +10,6 @@ class HomeController {
     }
     public function index() {
         try {
-            if($_SESSION){
-                session_unset();
-                session_destroy();
-            }
             require_once 'views/home/index.php';
             exit();
         } catch (Exception $e) {
@@ -28,8 +24,7 @@ class HomeController {
                 redirectTo('/');
             }
             require_once 'views/home/dashboard.php';
-        } catch (Exception $e) {
-            logError($e->getMessage());
+        } catch (Exception $e) {            logError($e->getMessage());
         }
     }
 

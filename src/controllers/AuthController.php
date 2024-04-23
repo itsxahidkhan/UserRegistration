@@ -70,6 +70,20 @@ class AuthController {
             exit();
         }
     }
+
+    function  logout()
+    {
+        try {
+                session_unset();
+                session_destroy();
+                redirectTo('/');
+                exit();
+        }catch (Exception $e){
+            logError($e->getMessage());
+            redirectTo('/dashboard');
+            exit();
+        }
+    }
 }
 
 ?>
