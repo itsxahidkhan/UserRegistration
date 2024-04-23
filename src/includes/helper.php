@@ -34,7 +34,7 @@ function uploadFile($file, $targetDirectory) {
 
     // Check if file already exists
     if (file_exists($targetFilePath)) {
-        return "File already exists.";
+        return $targetFilePath;
     }
 
     // Check file size
@@ -50,7 +50,7 @@ function uploadFile($file, $targetDirectory) {
 
     // Upload file
     if (move_uploaded_file($file["tmp_name"], $targetFilePath)) {
-        return "File uploaded successfully.";
+        return $targetFilePath;
     } else {
         return "Error uploading file.";
     }
