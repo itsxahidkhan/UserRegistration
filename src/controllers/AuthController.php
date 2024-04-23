@@ -29,7 +29,7 @@ class AuthController {
 
                 $result = $this->userModel->registerUser($username, $email, $password);
                 if ($result) {
-                    header("Location: /login");
+                    redirectTo('/login');
                     exit();
                 } else {
                     throw new Exception('Failed to register user');
@@ -55,7 +55,7 @@ class AuthController {
                 if ($user && password_verify($password, $user['password'])) {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_name'] = $user['username'];
-                    header("Location: /dashboard");
+                    redirectTo('/dashboard');
                     exit();
                 } else {
                     throw new Exception('Invalid email or password');
@@ -66,7 +66,7 @@ class AuthController {
         } catch (Exception $e) {
             logError($e->getMessage());
             $_SESSION['error'] = $e->getMessage();
-            header("Location: /login");
+            redirectTo('/login');
             exit();
         }
     }
