@@ -1,2 +1,17 @@
 [2024-04-23 07:52:10] ERROR: check
 [2024-04-23 07:53:03] ERROR: Username or email already exists
+[2024-04-23 09:34:16] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:35:09] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:35:27] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:36:00] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:37:08] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:37:23] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':user_id' at line 1
+[2024-04-23 09:40:56] ERROR: Unknown column 'profile_image' in 'field list'
+[2024-04-23 09:41:54] ERROR: Unknown column 'profile_image' in 'field list'
+[2024-04-23 09:45:41] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:47:07] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:49:11] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:50:33] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:51:45] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:52:51] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-23 09:53:03] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
