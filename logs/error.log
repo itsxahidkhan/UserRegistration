@@ -15,3 +15,5 @@
 [2024-04-23 09:51:45] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
 [2024-04-23 09:52:51] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
 [2024-04-23 09:53:03] ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':profile_image WHERE id = :user_id' at line 1
+[2024-04-25 06:32:05] ERROR: Invalid email or password
+[2024-04-25 06:32:18] ERROR: Invalid email or password

@@ -13,10 +13,10 @@ class AuthController {
     public function register() {
         try {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $username = $_POST['username'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $confirmPassword = $_POST['confirm_password'];
+                $username = sanitizeInput($_POST['username']);
+                $email = sanitizeInput($_POST['email']);
+                $password = sanitizeInput($_POST['password']);
+                $confirmPassword = sanitizeInput($_POST['confirm_password']);
 
                 if ($password !== $confirmPassword) {
                     throw new Exception('Passwords do not match');
@@ -48,13 +48,14 @@ class AuthController {
     public function login() {
         try {
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $email = $_POST['email'];
-                $password = $_POST['password'];
+                $email = sanitizeInput($_POST['email']);
+                $password = sanitizeInput($_POST['password']);
 
                 $user = $this->userModel->getUserByEmail($email);
                 if ($user && password_verify($password, $user['password'])) {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_name'] = $user['username'];
+                    $_SESSION['profile_image'] = $user['profile_image'];
                     redirectTo('/dashboard');
                     exit();
                 } else {

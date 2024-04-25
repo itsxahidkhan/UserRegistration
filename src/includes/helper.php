@@ -70,4 +70,18 @@ function logError($errorMessage) {
     // Write to log file
     file_put_contents($logFilePath, $logMessage, FILE_APPEND);
 }
+
+// helper.php
+
+// Function to sanitize input
+function sanitizeInput($input) {
+    // Remove whitespace from the beginning and end of the input
+    $input = trim($input);
+    // Remove backslashes
+    $input = stripslashes($input);
+    // Convert special characters to HTML entities
+    $input = htmlspecialchars($input);
+    return $input;
+}
+
 ?>

@@ -11,7 +11,7 @@
     <a href="/logout">Logout</a>
     <h1>Welcome <?=$_SESSION['user_name']?></h1>
 
-    <?php if ($_SESSION['profile_image']){ ?>
+    <?php if (isset($_SESSION['profile_image']) && $_SESSION['profile_image']){ ?>
         <img src="<?=$_SESSION['profile_image']?>" id="profile_image">
     <?php } ?>
     <form id="profile_form" action="/uploadProfileImage" method="POST" enctype="multipart/form-data">
